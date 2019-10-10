@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'bootstrap3',
-    'gallery_mukamisha.apps.gallery_mukamishaConfig',
+    'gallery_mukamisha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
