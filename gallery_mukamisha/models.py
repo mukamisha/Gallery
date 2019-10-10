@@ -14,3 +14,9 @@ class Image(models.Model):
 
     class Meta:
         ordering = ['img_name']
+
+class Location(models.Model):
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
