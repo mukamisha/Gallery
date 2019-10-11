@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Gallery_jacky.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'Gallery',
+        'NAME': 'gallery',
         'USER': 'mukamisha',
         'PASSWORD':'mukamisha@97',
     }

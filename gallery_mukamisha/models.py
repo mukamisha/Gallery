@@ -32,7 +32,7 @@ class Image(models.Model):
     Category = models.ForeignKey(Category)
   
     def __str__(self):
-        return self.first_name
+        return self.img_name
 
 
     class Meta:
