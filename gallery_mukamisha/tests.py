@@ -31,7 +31,10 @@ class CategoryTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.lili,Category))
 
-   
+    def test_save_method(self):
+        self.lili.save_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category) > 0)
  
 class ImageTestClass(TestCase):
 
