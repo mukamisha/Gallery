@@ -4,9 +4,10 @@ from .models import Image,Category,Location
 
 # Create your views here.
 # def welcome(request):
+
 #     return HttpResponse('Welcome to the Moringa Tribune')
 
 
 def images(request):
-   images = Image.objects.all()
-   return render(request, 'image.html',{'images':images})
+   image = Image.objects.all()
+   return render(request, 'image.html',{'image':image})
