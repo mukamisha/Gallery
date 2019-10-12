@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'bootstrap3',
+    
     'gallery_mukamisha',
+    'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'Gallery_jacky.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'gallery',
+        'NAME': 'photo',
         'USER': 'mukamisha',
         'PASSWORD':'mukamisha@97',
     }

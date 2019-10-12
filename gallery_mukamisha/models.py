@@ -29,13 +29,16 @@ class Image(models.Model):
     img_name = models.CharField(max_length =30)
     img_description = models.TextField()
     location = models.ForeignKey(Location)
-    Category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category,db_column='name')
   
     def __str__(self):
         return self.img_name
 
 
-    class Meta:
-        ordering = ['img_name']
+ 
 
-  
+    
+    @classmethod
+    def search_by_category(cls,search_term):
+        news = cls.objects.filter(category__name__contains=search_term)
+        return news
