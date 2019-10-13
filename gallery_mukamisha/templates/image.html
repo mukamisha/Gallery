@@ -6,11 +6,13 @@
 
 {% for images in image %}
 
-      <div class="col-md-4" data-toggle="modal" data-target="#{{images.id}}">
-    <!--Display news Article images  -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{images.img.url}}" alt="">
+    <div class="container" data-toggle="modal" data-target="#{{images.id}}" >
+    <!--Display gallery  images  -->
+    <div class="row" style="width:100%;padding: 0 -8px;display: flex;padding: 0 -8px">
+    <div class="col-md-3">
+      <img style="width:120%;margin-left:130%;padding-top:20%"src="{{images.img.url}}" alt="">
     </div>
+  </div>
 
       </div>
         <!-- .modal-profile -->
@@ -22,8 +24,8 @@
                                       <h3 class="modal-title">{{images.img_name}}</h3>
                                 </div>
                                 <div class="modal-body" >
-              <!-- <p>Name: {{images.image_name}}</p> -->
-              <p>Description: {{images.description}}</p>
+             
+              <p>Description: {{images.img_description}}</p>
               <p>category: {{images.category}}</p>
               <p>location: {{images.location}}</p>
             </div>
@@ -36,7 +38,7 @@
          
           
  {%endfor%}
-  <!-- Some code below -->
+ 
 
 {% endblock %}
   

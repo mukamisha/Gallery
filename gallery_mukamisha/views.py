@@ -10,8 +10,7 @@ from .models import Image,Category,Location
 
 def images(request):
    image = Image.objects.all()
-   print("hello")
-   print(image)
+
    return render(request, 'image.html',{'image':image})
 
 def search_results(request):
@@ -35,7 +34,7 @@ def get_image(request,image_id):
     return render(request,"photo.html", {"image":image})
 
 
-def filter_by_location(request, id):
+def filter_by_location(request, location):
    location = Location.objects.all()
-   images = Image.objects.filter(location__id=id)
+   images = Image.objects.filter(location)
    return render(request, "location.html",{'images':images,'location':location})
