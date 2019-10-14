@@ -1,7 +1,7 @@
 ## CALLERY
 ### BY **JACKY**
 ## DESCRIPTION
-this is a web application that helps you to keep all your account credentials , to use them when needed
+this is a web application where you will see the gallery
 
 
 ## SETUP INSTALLATION REQUIRED:
@@ -11,13 +11,14 @@ this is a web application that helps you to keep all your account credentials , 
     *GOOGLE CHROME
 ## TECHNOLOGY USED:
     * PYTHON.
-    *FLASK
+    *DJANGO
+    *JAVASCRIPT
    
 ## BDD
-    * you open this app and see all posted pitches
-    *you can  also live a pitch if you want
-    *you can like or dislike by clicking upvote or downvote buttons
-    *you can leave a comment if you want, you comments are very valuable to us.
+    * you open this app and see all pictures
+    *you can  also select a picture by it's id
+    *admin can delete it
+    *you can select a picture according to the location
 ## This is my project link
 
 ## SUPPORT AND CONTACT 
