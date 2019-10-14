@@ -3,6 +3,24 @@
 {% block content %}
 {{block.super}}
 
+<div class="conatiner">
+
+  <h2 style="text-align:center ;color:black;font-family:Georgia, 'Times New Roman', Times, serif">Welcome To My Gallery</h2>
+</div>
+
+<script>
+  function myFunction(){
+    var copyText=document.getElementById("link");
+    copyText.select();
+    document.execCommand("copy");
+    // this will copy the images's link
+    alert("copied the text: " + copyText.value);
+  }
+</script>
+
+
+
+
 
 {% for images in image %}
 
@@ -30,6 +48,8 @@
               <p>location: {{images.location}}</p>
             </div>
             <div class="modal-footer">
+              <input class="form-control" type="text" value="{{images.img.url}}" id="link">
+              <a onclick="myFunction()"><button type="button" class="btn btn-dark">Copy Link</button></a>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>

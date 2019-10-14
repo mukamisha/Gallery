@@ -34,7 +34,7 @@ def get_image(request,image_id):
     return render(request,"photo.html", {"image":image})
 
 
-def filter_by_location(request, location):
+def filter_by_location(request, id):
    location = Location.objects.all()
-   images = Image.objects.filter(location)
+   images = Image.objects.filter(location__id=id)
    return render(request, "location.html",{'images':images,'location':location})
