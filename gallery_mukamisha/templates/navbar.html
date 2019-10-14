@@ -28,7 +28,21 @@
         </form>
       </div>
       <!-- search form end -->
-
+      <div class="nav-item dropdown" style="float: right;">
+        <button class="btn btn-secondary dropdown-toggle" href="#"
+           id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" style="font-family: 'Kodchasan', sans-serif; color: black"
+          aria-expanded="false">
+          Locations
+      </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {% for locations in location %}
+          <a class="dropdown-item"  href="/location/{{locations.id}}">{{locations.location}}</a>
+          <div class="dropdown-divider">
+          {% endfor %}
+        </div>
+      </div>
+          </div>
   </div>
 </nav>
 </body>

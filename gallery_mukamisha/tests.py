@@ -21,6 +21,7 @@ class LocationTestClass(TestCase):
 
 
 
+
 class CategoryTestClass(TestCase):
     # Set up method that helps to create an instance of a class
     def setUp(self):
@@ -35,6 +36,31 @@ class CategoryTestClass(TestCase):
         self.lili.save_category()
         category = Category.objects.all()
         self.assertTrue(len(category) > 0)
+
+    # def test_update_category(self):
+    #    '''
+    #    Test if  Category object can be updated.
+    #    '''
+    #    self.lili.save_category()
+    #    self.category = Category.objects.filter(name = 'lili').update(name = "lucky")
+    #    self.category_new = Category.objects.get(name = 'lucky')
+    #    self.assertEqual(self.category_new.name,"lucky")
+
+    def tearDown(self):
+       '''
+       Test delete category behaivour
+       '''
+       Category.objects.all().delete()
+
+    def test_delete_category(self):
+       '''
+       Test if category can be deleted from db.
+       '''
+       self.lili.save_category()
+       self.category = Category.objects.get(id = 1)
+       self.category.delete_category()
+       self.assertTrue(len(Category.objects.all()) == 0)
+
  
 class ImageTestClass(TestCase):
 

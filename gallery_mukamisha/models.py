@@ -21,7 +21,10 @@ class Category(models.Model):
     def save_category(self):
         self.save()
 
-    
+    def update_category(self):
+        self.update()
+    def delete_category(self):
+        self.delete()
 
 
 class Image(models.Model):
