@@ -3,9 +3,7 @@
 {% block content %}
 {{block.super}}
 
-<div class="container">
 
-  <h2 style="text-align:center ;color:black;font-family:Georgia, 'Times New Roman', Times, serif">Welcome To My Gallery</h2>
 
 
 <script>
@@ -19,21 +17,24 @@
   }
 </script>
 
-<div class="col-md-3">
-
-
-
+<div class="container" style="width:100%">
+      <h2 style="text-align:center ;color:black;font-family:Georgia, 'Times New Roman', Times, serif">Welcome To My Gallery</h2>
+     
 {% for images in image %}
 
-<div class="container" data-toggle="modal" data-target="#{{images.id}}" >
+<div  data-toggle="modal" data-target="#{{images.id}}" >
     <!--Display gallery  images  -->
-    <div class="row" style="width:100%;padding: 0 -8px;display: flex;padding: 0 -8px">
+    <div class="row" style="width:80%;padding: 0 -8px;display: flex;padding: 0 -8px;padding-left:40%">
     <div class="col-md-3">
-      <img style="width:120%;margin-left:130%;padding-top:20%"src="{{images.img.url}}" alt="">
+      <img style="width:300%;padding-top:20%"src="{{images.img.url}}" alt="">
     </div>
   </div>
 
       </div>
+</div>
+    
+  
+      
         <!-- .modal-profile -->
                 <div class="modal fade modal-profile" tabindex="-1" role="dialog" aria-labelledby="modalProfile" id="{{images.id}}" aria-hidden="true" data-dismiss="modal">
                     <div class="modal-dialog modal-lg">
@@ -57,8 +58,8 @@
           </div>
           
         </div>
-      </div>
-    </div>
+      
+    
  {%endfor%}
  
 
