@@ -19,7 +19,20 @@ class LocationTestClass(TestCase):
         location = Location.objects.all()
         self.assertTrue(len(location) > 0)
 
-
+    def tearDown(self):
+       '''
+       Test delete location behaivour
+       '''
+       Location.objects.all().delete()
+       
+    def test_delete_location(self):
+       '''
+       Test if location can be deleted from db.
+       '''
+       self.keke.save_location()
+       self.location = Location.objects.get(id = 1)
+       self.location.delete_location()
+       self.assertTrue(len(Location.objects.all()) == 0)
 
 
 class CategoryTestClass(TestCase):
@@ -37,14 +50,6 @@ class CategoryTestClass(TestCase):
         category = Category.objects.all()
         self.assertTrue(len(category) > 0)
 
-    # def test_update_category(self):
-    #    '''
-    #    Test if  Category object can be updated.
-    #    '''
-    #    self.lili.save_category()
-    #    self.category = Category.objects.filter(name = 'lili').update(name = "lucky")
-    #    self.category_new = Category.objects.get(name = 'lucky')
-    #    self.assertEqual(self.category_new.name,"lucky")
 
     def tearDown(self):
        '''
